@@ -1,0 +1,10 @@
+{
+	"name": "grunt-extract-script",
+	"author": "Georgi Hristozov <georgi@forkbomb.nl>",
+	"description": "A test.",
+	"dependencies": {
+		"grunt": "0.4.x",
+		"htmlparser" : "*"
+	},
+	"main": "Gruntfile.js"
+}
