@@ -1,5 +1,7 @@
-== grunt-extract-script ==
-Extracts the sources referred with the <script> tag. Dead simple.
+# grunt-extract-script
+Extracts the sources referred with the ``<script>`` tag. Dead simple.
 
-== Example ==
-See Gruntfile.js.
+Use at own risk.
+
+# Example
+See ``Gruntfile.js``.
