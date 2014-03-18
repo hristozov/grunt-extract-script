@@ -1,25 +1,24 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	grunt.registerTask(
 		"extract-script",
 		"Extracts script tags from a HTML file.",
-		function() {
+		function () {
 			var config = grunt.config.get("extractScript");
 			if (!config || !config.path) {
 				grunt.fail.fatal("No path defined.");
 			}
-			var htmlparser = require("htmlparser");
+			var HtmlParser = require("htmlparser");
 			var rawHtml = grunt.file.read(config.path);
-			var handler = new htmlparser.DefaultHandler(function(error, dom) {
+			var handler = new HtmlParser.DefaultHandler(function (error, dom) {
 				if (error) {
 					grunt.fail.fatal("Could not parse the HTML file.");
 				} else {
-					var scripts = htmlparser.DomUtils.getElements({
+					var scripts = HtmlParser.DomUtils.getElements({
 						tag_name: "script"
 					}, dom);
-					var results = scripts.map(function(scriptNode) {
-						return scriptNode.attribs ? 
-						scriptNode.attribs.src : "";
-					}).filter(function(scriptPath) {
+					var results = scripts.map(function (scriptNode) {
+						return (scriptNode.attribs || {}).src;
+					}).filter(function (scriptPath) {
 						return !!scriptPath;
 					});
 					if (config.processingFunction) {
@@ -27,7 +26,7 @@ module.exports = function(grunt) {
 					}
 				}
 			});
-			var parser = new htmlparser.Parser(handler);
+			var parser = new HtmlParser.Parser(handler);
 			parser.parseComplete(rawHtml);
 		});
-}
+};
