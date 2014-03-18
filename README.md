@@ -1,7 +1,7 @@
 # grunt-extract-script
-Extracts the sources referred with the ``<script>`` tag. Dead simple.
+Extracts the JS sources referred with the ``<script>`` tag and passes them to a user-specified function. Dead simple.
 
-Use at own risk.
+It's still experimental, use at own risk.
 
 # Example
-See ``Gruntfile.js``.
+TBD. Meanwhile, see ``Gruntfile.js``.
