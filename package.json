@@ -6,5 +6,6 @@
 		"grunt": "0.4.x",
 		"htmlparser": "*"
 	},
-	"main": "Gruntfile.js"
+	"main": "Gruntfile.js",
+	"version": "0.0.1"
 }
