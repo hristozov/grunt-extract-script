@@ -4,7 +4,7 @@
 	"description": "A test.",
 	"dependencies": {
 		"grunt": "0.4.x",
-		"htmlparser" : "*"
+		"htmlparser": "*"
 	},
 	"main": "Gruntfile.js"
 }

@@ -1,8 +1,8 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	grunt.initConfig({
 		extractScript: {
 			path: "index.html",
-			processingFunction: function(results) {
+			processingFunction: function (results) {
 				console.log(require("sys").inspect(results));
 			}
 		}
